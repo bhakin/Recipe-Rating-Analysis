@@ -42,10 +42,10 @@ The review dataset contains 731927 reviews(rows) with 5 columns. Here is what th
 ## Data Cleaning and Exploratory Data Analysis
 ### Data Cleaning
 
-Now that we got our two dataset, we need to clean our data in order for us to analyze them. This were the steps I took to clean them:
-1) Converting data into correct types - This is important because it allows us to perform tests and provide more accturate representation of the data. So I converted the `'submitted'` and `'dates'` column to `'datetime'`
-2) Assigning data to the correct columns - The `'nutrition'`  column contains mutiple nutrition information on a recipe, so to make it easy to differentiate what nutrition it is referring to, I created `'calories (#)'`, `'total fat (PDV)'`, `'sugar (PDV)'`, `'sodium (PDV)'`, `'protein (PDV)'`, `'saturated fat (PDV)'`, `'carbohydrates (PDV)'` columns
-3) Fill nul values - 
+Now that we got our two dataset, we need to clean our data in order for us to analyze them. This were the steps I took to clean them: /
+1) **Converting data into correct types** - This is important because it allows us to perform tests and provide more accturate representation of the data. So I converted the `'submitted'` and `'dates'` column to `'datetime'` /
+2) **Assigning data to the correct columns** - The `'nutrition'`  column contains mutiple nutrition information on a recipe, so to make it easy to differentiate what nutrition it is referring to, I created `'calories (#)'`, `'total fat (PDV)'`, `'sugar (PDV)'`, `'sodium (PDV)'`, `'protein (PDV)'`, `'saturated fat (PDV)'`, `'carbohydrates (PDV)'` columns /
+3) **Fill in the null values **- 
 
 
 Then I merged 
