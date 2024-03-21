@@ -9,13 +9,33 @@ Nowadays, learning new cooking recipes is easy and accessible since all we have 
 
 ### Introduction to the Dataset
 
-The recipe dataset contains 83782 recipes with 12 columns. Here is what the dataset looks like: 
+The recipe dataset contains 83782 recipes(rows) with 12 columns. Here is what the dataset looks like: 
 
 |Column	                 |Description|
 |---                     |---        |
 |`'name'`                |Recipe name|
 |`'id'`                  |Recipe ID|
-|`'minutes'`             | Minutes to prepare recipe|
-|`'name'`                |Recipe name|
+|`'minutes'`             |Minutes to prepare recipe|
+|`'contributor_id'`      |User ID who submitted this recipe|
+|`'submitted'`           |Date recipe was submitted|
+|`'tags'`                |Food.com tags for recipe|
+|`'nutrition'`           |Nutrition information in the form [calories (#), total fat (PDV), sugar (PDV), sodium (PDV), protein (PDV), saturated fat (PDV)carbohydrates (PDV)]; PDV stands for “percentage of daily value”|
+|`'n_steps'`             |Number of steps in recipe|
+|`'steps'`               |Text for recipe steps, in order|
+|`'description'`         |User-provided description|
+|`'ingredients'`         |Ingredients needed for the recipe|
+|`'n_ingredients'`       |Number of Ingredients|
+
+
+The review dataset contains 731927 reviews(rows) with 5 columns. Here is what the dataset looks like:
+
+|Column	                 |Description|
+|---                     |---        |
+|`'user_id'`             |User ID|
+|`'recipe_id'`           |Recipe ID|
+|`'date'`                |Date of interaction|
+|`'rating'`              |Rating given|
+|`'review'`              |Review text|
+
 
 
