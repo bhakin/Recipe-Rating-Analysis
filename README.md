@@ -197,7 +197,16 @@ My final model consists of the **DecisionTreeClassifier**, **PolyFeatures of deg
 
 ## Fairness Analysis
 
+Finally, in this section, I will be testing the fairness of my final model. To do this I decided to separate my dataset into two groups where the first group is **short recipe** which consits of 8 steps or less and the second group is **long recipe** which consists of 9 or more steps. 
 
+**Null Hypothesis**: Our model is fair. Its R<sup>2</sup> for short recipes and long recipes are roughly the same, and any difference are due to random chance.
+**Alternative Hypothesis**: Our model is unfair. Its R<sup>2</sup> for short recipes is lower than its R<sup>2</sup> for long recipes.
+**Test Statistic**: Difference in Accuracy since I am trying to find the accuracy of the final model.
+**Significane Level**: 0.05
+
+
+
+**Conclusion**: After performing permutation 1000 times, I got the resulting figure above. The 
 
 
 
