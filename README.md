@@ -108,7 +108,7 @@ Based on this pivot table, we can see that there are some connections between `'
 
 ## Assessment Missingness
 
-As mentioned in the **Data Cleaning Process**, there are values in our dataset that are missing so in this section, I will evaluate and test why those values are missing. 
+As mentioned in the **Data Cleaning**, there are values in our dataset that are missing so in this section, I will evaluate and test why those values are missing. 
 
 ### NMAR Analysis
 
@@ -122,8 +122,8 @@ Now, I will test the dependency of the missingness of `'rating'`. To do this, I 
 
 **Rating and Carbohydrates (PDV)**
 
-Null Hypothesis: The missingness of `'rating'` **does NOT depends** on `'carbohydrates (PDV)'`
-Alternative Hypothesis: The missingness of `'rating'` **does depends** on `'carbohydrates (PDV)'`  
+Null Hypothesis: The missingness of `'rating'` **does NOT depends on** `'carbohydrates (PDV)'`
+Alternative Hypothesis: The missingness of `'rating'` **does depends on** `'carbohydrates (PDV)'`  
 Test Statistic : Difference of Means \
 Significance Level: 0.05
 
@@ -138,8 +138,8 @@ From the figure above, the p-value = 0.184. Since the significance level is 0.05
 
 **Rating and Number of Steps**
 
-Null Hypothesis: The missingness of `'rating'` **does NOT depends** on `'n_steps'`
-Alternative Hypothesis: The missingness of `'rating'` **does depends** on `'n_steps'`  
+Null Hypothesis: The missingness of `'rating'` **does NOT depends on** `'n_steps'`
+Alternative Hypothesis: The missingness of `'rating'` **does depends on** `'n_steps'`  
 Test Statistic : Difference of Means \
 Significance Level: 0.05
 
@@ -155,6 +155,20 @@ From the figure above, the p-value = 0.0. Since the significane level is 0.5 the
 ---
 
 ## Hypothesis Testing
+
+In the Bivariate Analysis section, we looked at the distributions between `'avg_rating'` and `'minutes'` and noticed that there might be some connections between these two, specically on how shorter time length of a recipe tend to have a higher average rating. So in this section, I will perfom a permutation test and see whether this is true or not. /
+
+**Null Hypothesis**: There is no effect of cooking time under under 1 hour (60 minutes) on the average rating of recipes.
+**Alternative Hypothesis**: Cooking time under 1 hour (60 minutes) have an effect on the average rating of recipes.
+**Test Statistic**: Difference in Means since I am comparing two numerical distributions
+**Signficance Level**: 0.05
+
+<iframe
+  src="assets/hypothesis_test.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
 
 
 
