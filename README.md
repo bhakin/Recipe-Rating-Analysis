@@ -112,13 +112,18 @@ As mentioned in the **Data Cleaning Process**, there are values in our dataset t
 
 ### NMAR Analysis
 
-In our dataset, the most missing values are from the `'rating'` column with over 15,000 recipes and this is possibly due to NMAR (Not Missing At Random). This is because some people might choose not to rate the recipe if they don't feel strongly aganist or for the recipe so they would leave it blank. Additionally, people might just forget to rate a recipe after they finish making it because it is not something they are required to do. Both of these points are the reasons why `'rating'` might be NMAR. \ 
+In our dataset, the most missing values are from the `'rating'` column with over 15,000 recipes and this is possibly due to NMAR (Not Missing At Random). This is because some people might choose not to rate the recipe if they don't feel strongly aganist or for the recipe so they would leave it blank. Additionally, people might just forget to rate a recipe after they finish making it because it is not something they are required to do. Both of these points are the reasons why `'rating'` might be NMAR.  
 
-However, if we want the missingness of `'rating'` to be MAR (Missing At Random), we could add another column where people would say **Good** if the recipe was good, **Meh** if the recipe was so so, and **Bad** if the recipe was bad. Having this column would show that whether the missingess of `'rating'` is dependent on this new column or not which makes it MAR.
+However, if we want the missingness of `'rating'` to be MAR (Missing At Random), we could add another column where people would say **Good** if the recipe was good, **Meh** if the recipe was so so, and **Bad** if the recipe was bad. Having this column would show that whether the missingess of `'rating'` is dependent on this new column, making this MAR instead of NMAR.
 
 ### Missingness Dependency
 
+Now, I will test the dependency of the missingness of `'rating'`. To do this, I chose to test the dependency of `'rating'` on `'carbohydrates (PDV)'` and `'n_steps'` 
 
+**Rating and Carbohydrates (PDV)**
+
+Null Hypothesis: The missingness of `'rating'` **does NOT depends** on `'carbohydrates (PDV)'`
+Alternative Hypothesis: The missingness of `'rating'` **does depends** on `'carbohydrates (PDV)'`  
 
 
 
