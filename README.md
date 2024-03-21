@@ -26,8 +26,7 @@ The recipe dataset contains 83782 recipes(rows) with 12 columns. Here is what th
 |`'ingredients'`         |Ingredients needed for the recipe|
 |`'n_ingredients'`       |Number of Ingredients|
 
-
-
+\
 The review dataset contains 731927 reviews(rows) with 5 columns. Here is what the dataset looks like:
 
 |Column	                 |Description|
@@ -41,6 +40,8 @@ The review dataset contains 731927 reviews(rows) with 5 columns. Here is what th
 
 ## Data Cleaning and Exploratory Data Analysis
 ### Data Cleaning
+
+Now that we got our two dataset, we need to clean our data so we need to merge them so that all of the information are in the same dataset
 
 
 
