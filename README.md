@@ -118,12 +118,28 @@ However, if we want the missingness of `'rating'` to be MAR (Missing At Random),
 
 ### Missingness Dependency
 
-Now, I will test the dependency of the missingness of `'rating'`. To do this, I chose to test the dependency of `'rating'` on `'carbohydrates (PDV)'` and `'n_steps'` 
+Now, I will test the dependency of the missingness of `'rating'`. To do this, I will perform a permutation test to test the dependency of `'rating'` on `'carbohydrates (PDV)'` and `'n_steps'` 
 
 **Rating and Carbohydrates (PDV)**
 
 Null Hypothesis: The missingness of `'rating'` **does NOT depends** on `'carbohydrates (PDV)'`
 Alternative Hypothesis: The missingness of `'rating'` **does depends** on `'carbohydrates (PDV)'`  
+Test Statistic : Difference of Means
+Significance Level: 0.05
+
+<iframe
+  src="assets/emp_missing1.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+
+
+
+
+
+
+
 
 
 
