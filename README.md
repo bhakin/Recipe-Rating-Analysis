@@ -56,8 +56,8 @@ After clearning my data, this is what the new **dataframe** looks like (this is 
 
 |name |id |minutes |n_steps |n_ingredients |calories(#) |total fat (PDV) |sugar (PDV) |sodium (PDV) |protein (PDV) |saturated fat (PDV) |carbohydrates (PDV) |rating |avg_rating | 
 |--- |---|---   |---|   |---          |---        |---            |---        |---         |---          |---                |---                |---   |---       |
-|1 brownies in the world    best ever|333281|40|10|9|138.4|10.0|50.0|3.0|3.0|19.0|6.0|4|4.0
-|1 in canada chocolate chip cookies|453467|45|12|11|595.1|46.0|211.0|22.0|13.0|51.0|26.0|5|5.0
+|1 brownies in the world    best ever |333281 |40 |10 |9 |138.4 |10.0 |50.0 |3.0 |3.0 |19.0 |6.0 |4 |4.0 |
+|1 in canada chocolate chip cookies |453467 |45 |12 |11 |595.1 |46.0 |211.0 |22.0 |13.0 |51.0 |26.0 |5 |5.0 |
 
 
 
