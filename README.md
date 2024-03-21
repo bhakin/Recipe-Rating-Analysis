@@ -100,11 +100,23 @@ Let's see if the rating of a recipe has some connections with the amount of step
 | 4      | 88.0        |9.577425      |9.0             |1.0          |37307.0       |
 | 5      | 100.0       |9.984901      |9.0             |1.0          |169676.0      |
 
-Based on this pivot table, we can see that there are some connections between `'rating'` and `'n_steps'`. If we look at the mean of each n_step, it tells us that a large n_steps tends to have a lower rating than a small n_steps. However, if we look at the max column, we can see that the rating 5 has a max of 100 steps whereas the rating 1 has only 55 steps, but we have to keep in mind that mean for rating 5 is smaller than the mean for rating 1. This implies that the 100 may have been an outlier. 
+\
+
+Based on this pivot table, we can see that there are some connections between `'rating'` and `'n_steps'`. If we look at the mean of each n_step, it tells us that a large n_steps tends to have a lower rating than a small n_steps. However, if we look at the max column, we can see that the rating 5 has a max of 100 steps whereas the rating 1 has only 55 steps, but we have to keep in mind that the mean for rating 5 is smaller than the mean for rating 1. This implies that the 100 may have been an outlier. 
 
 ---
 
 ## Assessment Missingness
+
+As mentioned in the **Data Cleaning Process**, there are values in our dataset that are missing so in this section, I will evaluate and test why those values are missing. 
+
+### NMAR Analysis
+
+In our dataset, the most missing values are from the `'rating'` column with over 15,000 recipes and this is possibly due to NMAR (Not Missing At Random). This is because some people might choose not to rate the recipe if they don't feel strongly aganist or for the recipe so they would leave it blank. Additionally, people might just forget to rate a recipe after they finish making it because it is not something they are required to do. Both of these points are the reasons why `'rating'` might be NMAR. \ 
+
+However, if we want the missingness of `'rating'` to be MAR (Missing At Random), we could add another column where people would say **Good** if the recipe was good, **Meh** if the recipe was so so, and **Bad** if the recipe was bad. Having this column would show that whether the missingess of `'rating'` is dependent on this new column or not which makes it MAR.
+
+### Missingness Dependency
 
 
 
