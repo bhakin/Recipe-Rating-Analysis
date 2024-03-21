@@ -174,6 +174,16 @@ In the Bivariate Analysis section, we looked at the distributions between `'avg_
 
 ---
 
+## Framing a Prediction Problem
+
+Now that we have some understanding on what factors cause good rating and bad rating, for the rest of this analysis, I will shift gear and try to **predict the rating of each recipe**. To do this, I will use the relevant information from the dataset to predict such as `'minutes'`, `'n_steps'`, `'n_ingredients'`, `'calories (#)'`, `'total fat (PDV)'`, `'sugar (PDV)'`, `'sodium (PDV)'`, `'protein (PDV)'`, `'saturated fat (PDV)'`, and `'carbohydrates (PDV)'`
+
+---
+
+## Baseline Model
+
+
+
 
 
 
