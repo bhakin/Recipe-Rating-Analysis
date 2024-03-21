@@ -62,6 +62,7 @@ After clearning my data, this is what the new **dataframe** looks like (this is 
 
 ### Exploratory Data Analysis
 
+#### Univariate Analysis
 
 
 
