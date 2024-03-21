@@ -1,3 +1,4 @@
-# Recipe-Rating-Analysis
+# Analysis On What Factors Get A Recipe To Get A Good/Bad Rating
 
-# Check
+By Bhakin Phanakesiri
+
