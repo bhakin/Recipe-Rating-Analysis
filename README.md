@@ -62,7 +62,7 @@ After clearning my data, this is what the new **dataframe** looks like (this is 
 
 ### Exploratory Data Analysis
 
-Now that we cleaned our data, we can start visualizing what the data we have look like. \
+Now that we cleaned our data, we can start visualizing what the data we have look like. 
 
 #### Univariate Analysis
 
@@ -74,6 +74,18 @@ This figure below is the distribution of rating in  our dataset. This figure rep
   height="600"
   frameborder="0"
 ></iframe>
+
+#### Bivariate Analysis
+
+
+<iframe
+  src="assets/log_mins.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+
+
 
 
 
