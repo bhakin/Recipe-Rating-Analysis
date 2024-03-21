@@ -64,6 +64,13 @@ After clearning my data, this is what the new **dataframe** looks like (this is 
 
 #### Univariate Analysis
 
+<iframe
+  src="assets/rating.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+
 
 
 
