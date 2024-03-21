@@ -77,7 +77,7 @@ This figure below is the distribution of `'rating'` from our dataset. This figur
 
 #### Bivariate Analysis
 
-This figure below is the distribution of `'minutes'` in log and`'avg_rating'` from our dataset. The reason why I **log(minutes)** because the data was too big so it was hard to visualize what was going on. Based on the figure, we can see that most of the data are located in the bottom right of the figure. This shows us that recipe that takes a short amount of time tend to have a higher average rating (around 4 - 5)
+This figure below is the distribution of `'minutes'` in log and`'avg_rating'` from our dataset. The reason why I **log(minutes)** because the data was too big so it was hard to visualize what was going on. Based on the figure, we can see that most of the data are located in the **bottom right of the figure.** This shows us that recipe that takes a short amount of time tend to have a **higher** average rating (around 4 - 5).
 
 <iframe
   src="assets/log_mins.html"
@@ -88,6 +88,15 @@ This figure below is the distribution of `'minutes'` in log and`'avg_rating'` fr
 
 
 #### Interesting Aggregates
+
+| rating | max_n_steps | mean_n_steps | median_n_steps | min_n_steps |
+|--------|-------------|--------------|----------------|-------------|
+| 0      | 93.0        |11.270968     |9.0             |1.0          |
+| 1      | 55.0        |10.629965     |9.0             |1.0          |
+| 2      | 61.0        |10.697635     |9.0             |1.0          |
+| 3      | 88.0        |9.992052      |9.0             |1.0          |
+| 4      | 88.0        |9.577425      |9.0             |1.0          |
+| 5      | 100.0       |9.984901      |9.0             |1.0          |
 
 
 
