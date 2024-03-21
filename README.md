@@ -176,17 +176,18 @@ In the Bivariate Analysis section, we looked at the distributions between `'avg_
 
 ## Framing a Prediction Problem
 
-Now that we have some understanding on what factors cause good rating and bad rating, for the rest of this analysis, I will shift gear and try to **predict the rating of each recipe**. To do this, I will use the relevant information from the dataset to predict such as `'minutes'`, `'n_steps'`, `'n_ingredients'`, `'calories (#)'`, `'total fat (PDV)'`, `'sugar (PDV)'`, `'sodium (PDV)'`, `'protein (PDV)'`, `'saturated fat (PDV)'`, and `'carbohydrates (PDV)'`. This is a **classification** prediction problem.
+Now that we have some understanding on what factors cause good rating and bad rating, for the rest of this analysis, I will shift gear and try to **predict the rating of each recipe**. To do this, I will use the relevant information from the dataset to predict such as `'minutes'`, `'n_steps'`, `'n_ingredients'`, `'calories (#)'`, `'total fat (PDV)'`, `'sugar (PDV)'`, `'sodium (PDV)'`, `'protein (PDV)'`, `'saturated fat (PDV)'`, and `'carbohydrates (PDV)'`. This is a **multiclass classification** prediction problem since we are trying to predict an oridnal data. The **response variable** is `'rating'` because it is the variable I am trying to predict. The evaluation metric for my model is R<sup>2</sup>. Even though this is a classification problem, I am using R<sup>2</sup> because it is more efficient and best summarize the accuracy of my model, whereas, for precision and recall, I have to perform it for each rating which is not efficient. 
 
 ---
 
 ## Baseline Model
 
-My baseline model consists of only the **Linear Regression**. The features I decided to use are `'minutes'`, `'n_steps'`, `'n_ingredients'`, and `'calories (#)'`. All of theese features are quantitative since there are all numberical. Because they are all quantitative data, I did not perform any encoding since I was able to perform **Linear Regression** on those features. After performing **Linear Regression**, the R^2 of my model is **0.002517094045029311** on my training set and **0.003164112457229362** on my testing set. Based on the R^2, I believe that my current model is bad considering how it is pretty close to 0. This means that the the prediction of my models are not quite accurate. 
+My baseline model consists of only the **Linear Regression**. The features I decided to use are `'minutes'`, `'n_steps'`, `'n_ingredients'`, and `'calories (#)'`. All of theese features are quantitative since there are all numberical so there are no ordinal and nominal data. Because they are all quantitative data, I did not perform any encoding since I was able to perform **Linear Regression** on those features. After performing **Linear Regression**, the R<sup>2</sup> of my model is **0.002517094045029311** on my training set and **0.003164112457229362** on my testing set. Based on the R<sup>2</sup>, I believe that my current model is bad considering how it is pretty close to 0. This means that the the prediction of my models are not quite accurate. 
 
 ---
 
 ## Final Model
+
 
 
 
