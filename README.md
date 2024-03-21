@@ -150,18 +150,18 @@ Significance Level: 0.05
   frameborder="0"
 ></iframe>
 
-From the figure above, the p-value = 0.0. Since the significane level is 0.5 then the p-value is smaller than the significance level because 0.0 < 0.05. Therefore, I **reject** he null hypothesis. This means that the missingness of `'rating'` **does depends on** `'n_steps'` which shows that this missingness is **MAR (Missing At Random).**
+From the figure above, the p-value = 0.0. Since the significane level is 0.5 then the p-value is smaller than the significance level because 0.0 < 0.05. Therefore, I **reject** the null hypothesis. This means that the missingness of `'rating'` **does depends on** `'n_steps'` which shows that this missingness is **MAR (Missing At Random).**
 
 ---
 
 ## Hypothesis Testing
 
-In the Bivariate Analysis section, we looked at the distributions between `'avg_rating'` and `'minutes'` and noticed that there might be some connections between these two, specically on how shorter time length of a recipe tend to have a higher average rating. So in this section, I will perfom a permutation test and see whether this is true or not. /
+In the Bivariate Analysis section, we looked at the distributions between `'avg_rating'` and `'minutes'` and noticed that there might be some connections between these two, specically on how shorter time length of a recipe tend to have a higher average rating. So in this section, I will perfom a permutation test and see whether this is true or not. 
 
-**Null Hypothesis**: There is no effect of cooking time under under 1 hour (60 minutes) on the average rating of recipes.
-**Alternative Hypothesis**: Cooking time under 1 hour (60 minutes) have an effect on the average rating of recipes.
-**Test Statistic**: Difference in Means since I am comparing two numerical distributions
-**Signficance Level**: 0.05
+**Null Hypothesis**: There is no effect of cooking time under under 1 hour (60 minutes) on the average rating of recipes. \
+**Alternative Hypothesis**: Cooking time under 1 hour (60 minutes) have an effect on the average rating of recipes. \
+**Test Statistic**: Difference in Means since I am comparing two numerical distributions. \
+**Signficance Level**: 0.05 so that I can an accuracy result fromt this test.
 
 <iframe
   src="assets/hypothesis_test.html"
@@ -169,6 +169,11 @@ In the Bivariate Analysis section, we looked at the distributions between `'avg_
   height="600"
   frameborder="0"
 ></iframe>
+
+**Conclusion**: After performing permutation 1000 times, I got the resulting figure above. The p-value = 0.223. Since the significance level is 0.5 then then the p-value is larger than the significance level because 0.223 > 0.05. So, I **fail to reject** the hypothesis. This means that there is no effect of cooking time under 1 hour (60 minutes) on the average rating of recipes. However, I can not conclude that this is 100% true considering how this is only one sample and this is not a controlled trials. There might be other factors that come into play that I don't know so hence I can not conclude that `'minutes'` has no absolutely effect on `'avg_rating'`.
+
+---
+
 
 
 
