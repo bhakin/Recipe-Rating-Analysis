@@ -62,7 +62,11 @@ After clearning my data, this is what the new **dataframe** looks like (this is 
 
 ### Exploratory Data Analysis
 
+Now that we cleaned our data, we can start visualizing what the data we have look like. \
+
 #### Univariate Analysis
+
+This figure below is the distribution of rating in  our dataset. This figure represnts the amount of time each rating is given to the recipe. We can see that there are over 160,000 recipes that have 5 ratings and less than 3000 recipes have a rating 1 or a rating 2. Moreover, it shows there about 15,000 recipes that did not get a rating.
 
 <iframe
   src="assets/rating.html"
