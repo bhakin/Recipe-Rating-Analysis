@@ -134,7 +134,23 @@ Significance Level: 0.05
   frameborder="0"
 ></iframe>
 
-From the figure above, I got that the p-value = 0.184. Since the significance level is 0.05 then the p-value is larger the signficance level because 0.184 > 0.05. Therefore, we **fail to reject** the null hypothesis. This means that the missingness of `'rating'` **does not depends on `'carbohydrates (PDV)'` which shows that this is **MCAR (Missing at Completely At Random)**
+From the figure above, I got that the p-value = 0.184. Since the significance level is 0.05 then the p-value is larger the significance level because 0.184 > 0.05. Therefore, I **fail to reject** the null hypothesis. This means that the missingness of `'rating'` **does not depends** on `'carbohydrates (PDV)'` which shows that this is **MCAR (Missing at Completely At Random).**
+
+**Rating and Number of Steps**
+
+Null Hypothesis: The missingness of `'rating'` **does NOT depends** on `'n_steps'`
+Alternative Hypothesis: The missingness of `'rating'` **does depends** on `'n_steps'`  
+Test Statistic : Difference of Means \
+Significance Level: 0.05
+
+<iframe
+  src="assets/emp_missing2.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+
+From the figure above, I got that the p-value = 0.0. Since the significane level is 0.5 then the p-value is smaller than the significance level because 0.0 < 0.05. Therefore, I **reject** he null hypothesis. This means that the missingness of `'rating'` **does depends** on `'n_steps'` which shows that it is **MAR (Missing At Random).**
 
 
 
