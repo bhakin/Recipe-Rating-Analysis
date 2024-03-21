@@ -27,6 +27,7 @@ The recipe dataset contains 83782 recipes(rows) with 12 columns. Here is what th
 |`'n_ingredients'`       |Number of Ingredients|
 
 
+
 The review dataset contains 731927 reviews(rows) with 5 columns. Here is what the dataset looks like:
 
 |Column	                 |Description|
@@ -36,6 +37,12 @@ The review dataset contains 731927 reviews(rows) with 5 columns. Here is what th
 |`'date'`                |Date of interaction|
 |`'rating'`              |Rating given|
 |`'review'`              |Review text|
+
+
+## Data Cleaning and Exploratory Data Analysis
+### Data Cleaning
+
+
 
 
 
