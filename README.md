@@ -182,7 +182,7 @@ Now that we have some understanding on what factors cause good rating and bad ra
 
 ## Baseline Model
 
-My baseline model consists of only the **Linear Regression**. The features I decided to use are `'minutes'` and `'n_steps'`. All of theese features are quantitative since there are all numberical so there are no ordinal and nominal data. Because they are all quantitative data, I did not perform any encoding since I was able to perform **Linear Regression** on those features. After performing **Linear Regression**, the R<sup>2</sup> of my model is **0.002517094045029311** on my training set and **0.003164112457229362** on my testing set. Based on the R<sup>2</sup>, I believe that my current model is bad considering how it is pretty close to 0. This means that the the prediction of my models are not quite accurate. 
+My baseline model consists of only the **DecisionTreeClassifier**. The features I decided to use are `'minutes'` and `'n_steps'`. All of theese features are quantitative since there are all numerical so there are no ordinal and nominal data. Because they are all quantitative data, I did not perform any encoding since I was able to perform **DecisionTreeClassifier** on those features. After performing **DecisionTreeClassifier**, the R<sup>2</sup> of my model is **0.38739583333333333** on my training set and **0.18666666666666668** on my testing set. Based on the R<sup>2</sup>, I believe that my current model is bad considering how it is pretty close to 0. This means that the the prediction of my models are not quite accurate. 
 
 ---
 
