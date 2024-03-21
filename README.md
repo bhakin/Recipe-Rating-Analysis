@@ -66,7 +66,7 @@ Now that we cleaned our data, we can start visualizing what the data we have loo
 
 #### Univariate Analysis
 
-This figure below is the distribution of rating in  our dataset. This figure represnts the amount of time each rating is given to the recipe. We can see that there are over 160,000 recipes that have 5 ratings and less than 3000 recipes have a rating 1 or a rating 2. Moreover, it shows there about 15,000 recipes that did not get a rating.
+This figure below is the distribution of `'rating'` from our dataset. This figure represents the amount of time each rating is given to the recipe. We can see that there are over 160,000 recipes that have 5 ratings and less than 3000 recipes have a rating 1 or a rating 2. Moreover, it shows there about 15,000 recipes that did not get a rating.
 
 <iframe
   src="assets/rating.html"
@@ -77,6 +77,7 @@ This figure below is the distribution of rating in  our dataset. This figure rep
 
 #### Bivariate Analysis
 
+This figure below is the distribution of `'minutes'` in log and`'avg_rating'` from our dataset. The reason why I **log(minutes)** because the data was too big so it was hard to visualize what was going on. Based on the figure, we can see that most of the data are located in the bottom right of the figure. This shows us that recipe that takes a short amount of time tend to have a higher average rating (around 4 - 5)
 
 <iframe
   src="assets/log_mins.html"
@@ -84,6 +85,10 @@ This figure below is the distribution of rating in  our dataset. This figure rep
   height="600"
   frameborder="0"
 ></iframe>
+
+
+#### Interesting Aggregates
+
 
 
 
