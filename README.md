@@ -124,7 +124,7 @@ Now, I will test the dependency of the missingness of `'rating'`. To do this, I 
 
 Null Hypothesis: The missingness of `'rating'` **does NOT depends** on `'carbohydrates (PDV)'`
 Alternative Hypothesis: The missingness of `'rating'` **does depends** on `'carbohydrates (PDV)'`  
-Test Statistic : Difference of Means
+Test Statistic : Difference of Means \
 Significance Level: 0.05
 
 <iframe
@@ -134,6 +134,7 @@ Significance Level: 0.05
   frameborder="0"
 ></iframe>
 
+From the figure above, I got that the p-value = 0.184. Since the significance level is 0.05 then the p-value is larger the signficance level because 0.184 > 0.05. Therefore, we **fail to reject** the null hypothesis. This means that the missingness of `'rating'` **does not depends on `'carbohydrates (PDV)'` which shows that this is **MCAR (Missing at Completely At Random)**
 
 
 
