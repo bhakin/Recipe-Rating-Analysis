@@ -89,15 +89,22 @@ This figure below is the distribution of `'minutes'` in log and`'avg_rating'` fr
 
 #### Interesting Aggregates
 
-| rating | max_n_steps | mean_n_steps | median_n_steps | min_n_steps |
-|--------|-------------|--------------|----------------|-------------|
-| 0      | 93.0        |11.270968     |9.0             |1.0          |
-| 1      | 55.0        |10.629965     |9.0             |1.0          |
-| 2      | 61.0        |10.697635     |9.0             |1.0          |
-| 3      | 88.0        |9.992052      |9.0             |1.0          |
-| 4      | 88.0        |9.577425      |9.0             |1.0          |
-| 5      | 100.0       |9.984901      |9.0             |1.0          |
+Let's see if the rating of a recipe has some connections with the amount of steps in a recipe:
 
+| rating | max_n_steps | mean_n_steps | median_n_steps | min_n_steps | count_nsteps |
+|--------|-------------|--------------|----------------|-------------|--------------|
+| 0      | 93.0        |11.270968     |9.0             |1.0          |15035.0       |
+| 1      | 55.0        |10.629965     |9.0             |1.0          |2870.0        |
+| 2      | 61.0        |10.697635     |9.0             |1.0          |2368.0        |
+| 3      | 88.0        |9.992052      |9.0             |1.0          |7172.0        |
+| 4      | 88.0        |9.577425      |9.0             |1.0          |37307.0       |
+| 5      | 100.0       |9.984901      |9.0             |1.0          |169676.0      |
+
+Based on this pivot table, we can see that there are some connections between `'rating'` and `'n_steps'`. If we look at the mean of each n_step, it tells us that a large n_steps tends to have a lower rating than a small n_steps. However, if we look at the max column, we can see that the rating 5 has a max of 100 steps whereas the rating 1 has only 55 steps, but we have to keep in mind that mean for rating 5 is smaller than the mean for rating 1. This implies that the 100 may have been an outlier. 
+
+---
+
+## Assessment Missingness
 
 
 
