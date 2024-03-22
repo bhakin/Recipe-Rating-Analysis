@@ -197,7 +197,7 @@ My final model consists of the **DecisionTreeClassifier**, **PolyFeatures of deg
 
 ## Fairness Analysis
 
-Finally, in this section, I will be testing the fairness of my final model. To do this I decided to separate my dataset into two groups where the first group is the **short recipe** which consists of 8 steps or less and the second group is the **long recipe** which consists of 9 or more steps. To evaluate this, I am going to use the R<sup>2</sup> since it best summarizes what is going on in our final model than using precision or recall.
+Finally, in this section, I will be testing the fairness of my final model. To do this I decided to separate my dataset into two groups where the first group is the **short recipe** which consists of 8 steps or less and the second group is the **long recipe** which consists of 9 or more steps. To evaluate this, I am going to use the R<sup>2</sup> since it best summarizes what is going on in our final model than using the precision or recall.
 
 **Null Hypothesis**: Our model is fair. Its R<sup>2</sup> for short recipes and long recipes are roughly the same, and any difference are due to random chance. \
 **Alternative Hypothesis**: Our model is unfair. Its R<sup>2</sup> for short recipes is lower than its R<sup>2</sup> for long recipes. \
