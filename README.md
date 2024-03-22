@@ -182,7 +182,7 @@ Now that we have some understanding on what factors cause good rating and bad ra
 
 ## Baseline Model
 
-My baseline model consists of only the **DecisionTreeClassifier**. The features I decided to use are `'minutes'` and `'n_steps'`. All of theese features are quantitative since there are all numerical so there are no ordinal and nominal data. Because they are all quantitative data, I did not perform any encoding since I was able to perform **DecisionTreeClassifier** on those features. After performing **DecisionTreeClassifier**, the R<sup>2</sup> of my model is **0.38739583333333333** on my training set and **0.18666666666666668** on my testing set. Based on the R<sup>2</sup>, I believe that my current model is bad considering how it is pretty close to 0. This means that the the prediction of my models are not quite accurate. 
+My baseline model consists of only the **DecisionTreeClassifier**. The features I decided to use are `'minutes'` and `'n_steps'`. All of theese features are quantitative since there are all numerical so there are no ordinal and nominal data. Because they are all quantitative data, I did not perform any encoding since I was able to perform **DecisionTreeClassifier** on those features. After performing **DecisionTreeClassifier**, the R<sup>2</sup> of my model is **0.3858333333333333** on my training set and **0.17541666666666667** on my testing set. Based on the R<sup>2</sup>, I believe that my current model is bad considering how it is pretty close to 0. This means that the the prediction of my models are not quite accurate. 
 
 ---
 
@@ -197,7 +197,7 @@ My final model consists of the **DecisionTreeClassifier**, **PolyFeatures of deg
 
 ## Fairness Analysis
 
-Finally, in this section, I will be testing the fairness of my final model. To do this I decided to separate my dataset into two groups where the first group is **short recipe** which consits of 8 steps or less and the second group is **long recipe** which consists of 9 or more steps. 
+Finally, in this section, I will be testing the fairness of my final model. To do this I decided to separate my dataset into two groups where the first group is the **short recipe** which consists of 8 steps or less and the second group is the **long recipe** which consists of 9 or more steps. To evaluate this, I am going to use the R<sup>2</sup> since it best summarizes what is going on in our final model than using precision or recall.
 
 **Null Hypothesis**: Our model is fair. Its R<sup>2</sup> for short recipes and long recipes are roughly the same, and any difference are due to random chance. \
 **Alternative Hypothesis**: Our model is unfair. Its R<sup>2</sup> for short recipes is lower than its R<sup>2</sup> for long recipes. \
@@ -211,5 +211,7 @@ Finally, in this section, I will be testing the fairness of my final model. To d
   frameborder="0"
 ></iframe>
 
-**Conclusion**: After performing permutation 1000 times, I got the resulting figure above. The **p-value** = 0.737. Since the significane level is 0.05, the p-value is much larger than the significance because 0.737 > 0.05. So, I **fail to reject** the null hypothesis. This means that our model is fair. Its R<sup>2</sup> for short recipes and long recipes are roughly the same, and any difference are due to random chance. 
+**Conclusion**: After performing permutation 1000 times, I got the resulting figure above. The **p-value = 0.737**. Since the significane level is 0.05, the p-value is much larger than the significance because 0.737 > 0.05. So, I **fail to reject** the null hypothesis. This means that our model is fair. Its R<sup>2</sup> for short recipes and long recipes are roughly the same, and any difference are due to random chance. 
+
+---
 
