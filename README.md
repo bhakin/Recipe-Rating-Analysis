@@ -199,9 +199,9 @@ My final model consists of the **DecisionTreeClassifier**, **PolyFeatures of deg
 
 Finally, in this section, I will be testing the fairness of my final model. To do this I decided to separate my dataset into two groups where the first group is **short recipe** which consits of 8 steps or less and the second group is **long recipe** which consists of 9 or more steps. 
 
-**Null Hypothesis**: Our model is fair. Its R<sup>2</sup> for short recipes and long recipes are roughly the same, and any difference are due to random chance.
-**Alternative Hypothesis**: Our model is unfair. Its R<sup>2</sup> for short recipes is lower than its R<sup>2</sup> for long recipes.
-**Test Statistic**: Difference in Accuracy since I am trying to find the accuracy of the final model.
+**Null Hypothesis**: Our model is fair. Its R<sup>2</sup> for short recipes and long recipes are roughly the same, and any difference are due to random chance. \
+**Alternative Hypothesis**: Our model is unfair. Its R<sup>2</sup> for short recipes is lower than its R<sup>2</sup> for long recipes. \
+**Test Statistic**: Difference in Accuracy since I am trying to find the accuracy of the final model. \
 **Significane Level**: 0.05
 
 <iframe
@@ -211,22 +211,5 @@ Finally, in this section, I will be testing the fairness of my final model. To d
   frameborder="0"
 ></iframe>
 
-
-
-**Conclusion**: After performing permutation 1000 times, I got the resulting figure above. The p-value = 0.737
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+**Conclusion**: After performing permutation 1000 times, I got the resulting figure above. The **p-value** = 0.737. Since the significane level is 0.05, the p-value is much larger than the significance because 0.737 > 0.05. So, I **fail to reject** the null hypothesis. This means that our model is fair. Its R<sup>2</sup> for short recipes and long recipes are roughly the same, and any difference are due to random chance. 
 
