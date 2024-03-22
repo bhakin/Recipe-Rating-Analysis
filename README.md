@@ -211,7 +211,7 @@ Finally, in this section, I will be testing the fairness of my final model. To d
   frameborder="0"
 ></iframe>
 
-**Conclusion**: After performing permutation 1000 times, I got the resulting figure above. The **p-value = 0.737**. Since the significane level is 0.05, the p-value is much larger than the significance because 0.737 > 0.05. So, I **fail to reject** the null hypothesis. This means that our model is fair. Its R<sup>2</sup> for short recipes and long recipes are roughly the same, and any difference are due to random chance. 
+**Conclusion**: After performing permutation 1000 times, I got the resulting figure above. The **p-value = 0.737**. Since the significane level is 0.05, the p-value is much larger than the significance because 0.737 > 0.05. So, I **fail to reject** the null hypothesis. This means that our model is fair. Its R<sup>2</sup> for short recipes and long recipes are roughly the same, and any difference are due to random chance. Therefore, my final model predicts fairly in both **short recipe group** and the **long recipe group**.
 
 ---
 
