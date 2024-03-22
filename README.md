@@ -124,7 +124,7 @@ Now, I will test the dependency of the missingness of `'rating'`. To do this, I 
 
 **Null Hypothesis**: The missingness of `'rating'` **does NOT depends on** `'carbohydrates (PDV)'`
 **Alternative Hypothesis**: The missingness of `'rating'` **does depends on** `'carbohydrates (PDV)'`  
-**Test Statistic** : Difference of Means \
+**Test Statistic** : Difference in Means \
 **Significance Level**: 0.05
 
 <iframe
@@ -140,7 +140,7 @@ From the figure above, the **p-value = 0.184.** Since the significance level is 
 
 **Null Hypothesis**: The missingness of `'rating'` **does NOT depends on** `'n_steps'` \
 **Alternative Hypothesis**: The missingness of `'rating'` **does depends on** `'n_steps'`  
-**Test Statistic** : Difference of Means \
+**Test Statistic** : Difference in Means \
 **Significance Level**: 0.05
 
 <iframe
@@ -150,7 +150,7 @@ From the figure above, the **p-value = 0.184.** Since the significance level is 
   frameborder="0"
 ></iframe>
 
-From the figure above, the p-value = 0.0. Since the significane level is 0.5 then the p-value is smaller than the significance level because 0.0 < 0.05. Therefore, I **reject** the null hypothesis. This means that the missingness of `'rating'` **does depends on** `'n_steps'` which shows that this missingness is **MAR (Missing At Random).**
+From the figure above, the **p-value = 0.0**. Since the significane level is 0.5 then the p-value is smaller than the significance level because 0.0 < 0.05. Therefore, I **reject** the null hypothesis. This means that the missingness of `'rating'` **does depends on** `'n_steps'` which shows that this missingness is **MAR (Missing At Random).**
 
 ---
 
