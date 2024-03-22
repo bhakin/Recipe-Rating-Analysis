@@ -112,7 +112,7 @@ As mentioned in the **Data Cleaning**, there are values in our dataset that are 
 
 ### NMAR Analysis
 
-In our dataset, the most missing values are from the `'rating'` column with over 15,000 recipes and this is possibly due to NMAR (Not Missing At Random). This is because some people might choose not to rate the recipe if they don't feel strongly aganist or for the recipe so they would leave it blank. Additionally, people might just forget to rate a recipe after they finish making it because it is not something they are required to do. Both of these points are the reasons why `'rating'` might be NMAR.  
+In the dataset, the most missing values are from the `'rating'` column with over 15,000 recipes and this is possibly due to NMAR (Not Missing At Random). This is because some people might choose not to rate the recipe if they don't feel strongly aganist or for the recipe so they would leave it blank. Additionally, people might just forget to rate a recipe after they finish making it because it is not something they are required to do. Both of these points are the reasons why `'rating'` might be NMAR.  
 
 However, if we want the missingness of `'rating'` to be MAR (Missing At Random), we could add another column where people would say **Good** if the recipe was good, **Meh** if the recipe was so so, and **Bad** if the recipe was bad. Having this column would show that whether the missingess of `'rating'` is dependent on this new column, making this MAR instead of NMAR.
 
@@ -122,10 +122,10 @@ Now, I will test the dependency of the missingness of `'rating'`. To do this, I 
 
 **Rating and Carbohydrates (PDV)**
 
-Null Hypothesis: The missingness of `'rating'` **does NOT depends on** `'carbohydrates (PDV)'`
-Alternative Hypothesis: The missingness of `'rating'` **does depends on** `'carbohydrates (PDV)'`  
-Test Statistic : Difference of Means \
-Significance Level: 0.05
+**Null Hypothesis**: The missingness of `'rating'` **does NOT depends on** `'carbohydrates (PDV)'`
+**Alternative Hypothesis**: The missingness of `'rating'` **does depends on** `'carbohydrates (PDV)'`  
+**Test Statistic** : Difference of Means \
+**Significance Level**: 0.05
 
 <iframe
   src="assets/emp_missing1.html"
@@ -134,14 +134,14 @@ Significance Level: 0.05
   frameborder="0"
 ></iframe>
 
-From the figure above, the p-value = 0.184. Since the significance level is 0.05 then the p-value is larger the significance level because 0.184 > 0.05. Therefore, I **fail to reject** the null hypothesis. This means that the missingness of `'rating'` **does not depends on** `'carbohydrates (PDV)'` which shows that this missingness is **MCAR (Missing at Completely At Random).**
+From the figure above, the **p-value = 0.184.** Since the significance level is 0.05 then the p-value is larger the significance level because 0.184 > 0.05. Therefore, I **fail to reject** the null hypothesis. This means that the missingness of `'rating'` **does not depends on** `'carbohydrates (PDV)'` which shows that this missingness is **MCAR (Missing at Completely At Random).**
 
 **Rating and Number of Steps**
 
-Null Hypothesis: The missingness of `'rating'` **does NOT depends on** `'n_steps'`
-Alternative Hypothesis: The missingness of `'rating'` **does depends on** `'n_steps'`  
-Test Statistic : Difference of Means \
-Significance Level: 0.05
+**Null Hypothesis**: The missingness of `'rating'` **does NOT depends on** `'n_steps'` \
+**Alternative Hypothesis**: The missingness of `'rating'` **does depends on** `'n_steps'`  
+**Test Statistic** : Difference of Means \
+**Significance Level**: 0.05
 
 <iframe
   src="assets/emp_missing2.html"
