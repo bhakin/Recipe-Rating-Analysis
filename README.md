@@ -5,7 +5,7 @@ By Bhakin Phanakesiri
 ---
 ## Introduction
 
-Nowadays, learning new cooking recipes is easy and accessible since all we have to do is go on the internet. However, picking a recipe may be challenging since there might be tons of good recipes for us to choose from. So to help us decide, we would look at the rating of each recipe and see which one has the highest rating. But you might ask, what makes this recipe have such a high rating compared to others? This is the question we are trying to answer by using the recipes and review data since the year 2008
+Nowadays, learning new cooking recipes is easy and accessible since all we have to do is go on the internet. However, picking a recipe may be challenging since there might be tons of good recipes for us to choose from. So to help us decide, we would look at the rating of each recipe and see which one has the highest rating. But you might ask, **what makes this recipe have such a high rating compared to others?** This is the question we are trying to answer by using the recipes and review data since the year 2008.
 
 ### Introduction to the Dataset
 
@@ -43,12 +43,12 @@ The review dataset contains 731927 reviews(rows) with 5 columns. Here is what th
 ### Data Cleaning
 
 Now that we got our two dataset, we need to clean our data in order for us to analyze them. This were the steps I took to clean them: \
-1) **Converting data into correct types** - This is important because it allows us to perform tests and provide more accturate representation of the data. So I converted the `'submitted'` and `'dates'` column to `'datetime'`. \
-2) **Assigning data to the correct columns** - The `'nutrition'`  column contains mutiple nutrition information on a recipe, so to make it easy to differentiate what nutrition it is referring to, I created `'calories (#)'`, `'total fat (PDV)'`, `'sugar (PDV)'`, `'sodium (PDV)'`, `'protein (PDV)'`, `'saturated fat (PDV)'`, `'carbohydrates (PDV)'` column. \
-3) **Filling in the null values** - Both recipe and review dataset contain missing values, so in order to not run into errors or wrong outcome, I filled in those values with 0, i.e `'review'` has a lot of missing data, so I filled in 0 for those values. \
+1) **Converting data into correct types** - This is important because it allows us to perform tests and provide more accurate representation of the data. So I converted the `'submitted'` and `'dates'` column to `'datetime'`. \
+2) **Assigning data to the correct columns** - The `'nutrition'`  column contains mutiple nutrition information on a recipe, so to make it easy to differentiate what nutrition it is referring to, I created `'calories (#)'`, `'total fat (PDV)'`, `'sugar (PDV)'`, `'sodium (PDV)'`, `'protein (PDV)'`, `'saturated fat (PDV)'`, `'carbohydrates (PDV)'` columns. \
+3) **Filling in the null values** - Both recipe and review dataset contain missing values, so in order to not run into errors or wrong outcome, I filled in those values with 0, i.e `'review'` and `'rating'` has a lot of missing data, so I filled in 0 for those values. \
 4) **Creating an `'avg_rating'` column** - Since we are analyzing the ratings of the recipe, I created an addition column, named `'avg_rating'` which tells us the average rating of each recipe. This is necessary since it will help us understand the rating of each recipe better which is vital for my test. \
-5) **Merging the two dataframe** - I merged the review dataframe with the recipe dataframe. Merging the two dataframe together helps analyzing them better since I don't have to go back and forth between the two dataframe. \
-6) **Dropping irrelevant columns** - This helps keeping the dataframe small despite the merge and gets rid of the unnecessary information. \
+5) **Merging the two dataframes** - I merged the review dataframe with the recipe dataframe. Merging the two dataframe together helps me analyzing them better since I don't have to go back and forth between the two dataframes. |
+6) **Dropping irrelevant columns** - This helps keeping the dataframe small despite the merge and gets rid of the unnecessary information. 
 
 After clearning my data, this is what the new **dataframe** looks like (this is the first five rows of the new dataframe):
 
@@ -66,7 +66,7 @@ Now that we cleaned our data, we can start visualizing what the data we have loo
 
 #### Univariate Analysis
 
-This figure below is the distribution of `'rating'` from our dataset. This figure represents the amount of time each rating is given to the recipe. We can see that there are over 160,000 recipes that have 5 ratings and less than 3000 recipes have a rating 1 or a rating 2. Moreover, it shows there about 15,000 recipes that did not get a rating.
+This figure below is the distribution of `'rating'` from our dataset. This figure represents the amount of time each rating is given to the recipe. We can see that there are over 160,000 recipes that have 5 ratings and less than 3000 recipes have a rating 1 or a rating 2. Moreover, it shows to us that there about 15,000 recipes that did not get a rating which is why it is 0.
 
 <iframe
   src="assets/rating.html"
@@ -77,7 +77,7 @@ This figure below is the distribution of `'rating'` from our dataset. This figur
 
 #### Bivariate Analysis
 
-This figure below is the distribution of `'minutes'` in log and`'avg_rating'` from our dataset. The reason why I **log(minutes)** because the data was too big so it was hard to visualize what was going on. Based on the figure, we can see that most of the data are located in the **bottom right of the figure.** This shows us that recipe that takes a short amount of time tend to have a **higher** average rating (around 4 - 5).
+This figure below is the distributions of `'minutes'` in log and`'avg_rating'` from our dataset. The reason why I **log(minutes)** is because the data was too big so it was hard to visualize what was going on. Based on the figure, we can see that most of the data are located in the **bottom right of the figure.** This shows us that recipe that takes a short amount of time tend to have a **higher** average rating (around 4 - 5).
 
 <iframe
   src="assets/log_mins.html"
@@ -89,7 +89,7 @@ This figure below is the distribution of `'minutes'` in log and`'avg_rating'` fr
 
 #### Interesting Aggregates
 
-Let's see if the rating of a recipe has some connections with the amount of steps in a recipe:
+Now, let's see if the rating of a recipe has some connections with the amount of steps:
 
 | rating | max_n_steps | mean_n_steps | median_n_steps | min_n_steps | count_nsteps |
 |--------|-------------|--------------|----------------|-------------|--------------|
@@ -100,9 +100,9 @@ Let's see if the rating of a recipe has some connections with the amount of step
 | 4      | 88.0        |9.577425      |9.0             |1.0          |37307.0       |
 | 5      | 100.0       |9.984901      |9.0             |1.0          |169676.0      |
 
-\
 
-Based on this pivot table, we can see that there are some connections between `'rating'` and `'n_steps'`. If we look at the mean of each n_step, it tells us that a large n_steps tends to have a lower rating than a small n_steps. However, if we look at the max column, we can see that the rating 5 has a max of 100 steps whereas the rating 1 has only 55 steps, but we have to keep in mind that the mean for rating 5 is smaller than the mean for rating 1. This implies that the 100 may have been an outlier. 
+
+Based on this pivot table, we can see that there are some connections between `'rating'` and `'n_steps'`. If we look at the mean of each n_step, it tells us that a large n_steps tends to have a lower rating than a small n_steps. However, if we look at the max column, we can see that the rating 5 has a max of 100 steps whereas the rating 1 has only 55 steps, but the mean for rating 5 is smaller than the mean for rating 1. This implies that the 100 may have been an outlier. 
 
 ---
 
